@@ -1,0 +1,2 @@
+module Articulate
+end
