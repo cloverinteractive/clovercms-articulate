@@ -1,0 +1,4 @@
+*.swp
+*~
+.DS_Store
+test/dummy/log/*.log
