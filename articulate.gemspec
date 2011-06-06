@@ -1,9 +1,7 @@
-# Provide a simple gemspec so you can easily use your enginex
-# project in your rails apps through git.
 Gem::Specification.new do |s|
-  s.name = "articulate"
-  s.summary = "Insert Articulate summary."
-  s.description = "Insert Articulate description."
+  s.name = "clovercms-articulate"
+  s.summary = "Articles support."
+  s.description = "Articles support for CloverCMS."
   s.files = Dir["{app,lib,config}/**/*"] + ["MIT-LICENSE", "Rakefile", "Gemfile", "README.rdoc"]
   s.version = "0.0.1"
 end

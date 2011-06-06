@@ -1,0 +1,9 @@
+es:
+  activerecord:
+    models:
+      article:  'Articulo'
+    attributes:
+      title:        'Titulo'
+      body:         'Cuerpo'
+      publish_date: 'Fecha de publicación'
+      publish:      'Publicar'
