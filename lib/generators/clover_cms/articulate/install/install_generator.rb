@@ -23,7 +23,7 @@ module CloverCms
         end
 
         def show_readme
-          reademe "README" if behavior == :invoke
+          readme "README" if behavior == :invoke
         end
       end
     end

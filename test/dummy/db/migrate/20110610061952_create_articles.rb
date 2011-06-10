@@ -5,7 +5,7 @@ class CreateArticles < ActiveRecord::Migration
       t.string  :title
       t.text    :body
       t.date    :publish_date
-      t.bool    :publish, :default => true
+      t.boolean :publish, :default => true
 
       t.timestamps
     end
