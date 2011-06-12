@@ -1,0 +1,12 @@
+===============================================================================
+
+Congratulations!, you should now have a new migration to run your only step left
+is to run:
+
+rake db:migrate
+
+Enjoy writing articles. :)
+
+===============================================================================
+
+
