@@ -1,0 +1,15 @@
+%fieldset
+  = form_for [ :dashboard, article ], :validate => true do |f|
+    = f.label :title
+    = f.text_field :title
+
+    = f.label :body
+    = f.text_area :body, :class => 'wymeditor'
+
+    = f.label :publish_date
+    = f.date_select :publish_date
+
+    = f.label     :published
+    = f.check_box :published,   :class => :published
+
+    = f.submit :class => 'wymupdate'

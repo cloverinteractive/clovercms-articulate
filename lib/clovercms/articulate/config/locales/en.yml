@@ -2,3 +2,7 @@ en:
   activerecord:
     models:
     attributes:
+
+  messages:
+    confirmations:
+      are_you_sure: Are you sure?

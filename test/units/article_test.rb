@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class ArticulateTest < ActiveSupport::TestCase
+class ArticuleTest < ActiveSupport::TestCase
   test "must have title" do
     assert article = Factory.build( :article, :title => nil )
     assert article.invalid?
@@ -11,11 +11,11 @@ class ArticulateTest < ActiveSupport::TestCase
     assert article.invalid?
   end
 
-  test "body's length must be at least 100 chars" do
-    assert article = Factory.build( :article, :body => ( 'a' * 99 ) )
+  test "body's length must be at least 50 chars" do
+    assert article = Factory.build( :article, :body => ( 'a' * 49 ) )
     assert article.invalid?
 
-    assert article.body = ('a' * 100 )
+    assert article.body = ('a' * 50 )
     assert article.valid?
   end
 
@@ -47,5 +47,13 @@ class ArticulateTest < ActiveSupport::TestCase
   test 'article has title in url' do
     assert article = Factory.create( :article )
     assert_match /#{article.title.parameterize}\Z/, article.to_param
+  end
+
+  test 'can delete article' do
+    assert article = Factory.create( :article )
+
+    assert_difference 'Article.count', -1 do
+      article.delete
+    end
   end
 end

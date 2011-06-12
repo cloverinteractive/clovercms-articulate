@@ -7,3 +7,7 @@ es:
       body:         'Cuerpo'
       publish_date: 'Fecha de publicación'
       publish:      'Publicar'
+
+  messages:
+    confirmations:
+      are_you_sure: '¿Estas seguro?'
