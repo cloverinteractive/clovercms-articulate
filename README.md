@@ -49,4 +49,5 @@ Feel free fork this project and submit a pull request, don't forget to add yours
 ## Contributors
 
 * [Enrique Vidal](http://github.com/EnriqueVidal) - Ruby developer
+* [Ulises Roche](http://github.com/ulisesroche) - Ruby developer
 

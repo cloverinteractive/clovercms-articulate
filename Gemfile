@@ -1,5 +1,9 @@
 source "http://rubygems.org"
 gem "rails", "3.0.8"
+gem 'acl9'
+gem 'kaminari'
+gem 'haml-rails'
+
 
 group :test do
   gem 'factory_girl_rails'
