@@ -5,5 +5,6 @@
 test/dummy/log/*.log
 test/dummy/db/*.sqlite3
 test/dummy/db/schema.rb
-test/dummy/db/migrate/*.rb
+test/dummy/db/migrate/*create_articles.rb
+test/dummy/tmp
 tmp/*

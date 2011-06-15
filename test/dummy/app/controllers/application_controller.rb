@@ -7,7 +7,8 @@ class ApplicationController < ActionController::Base
   rescue_from Acl9::AccessDenied, :with => :roles_notice
 
   def current_user
-    @current_user ||= User.new 'admin'
+    @current_user ||= User.find_or_initialize_by_username( params[:username] || 'admin' )
+    @current_user.save if @current_user.new_record?
     @current_user.has_role!( params[:role] || 'admin' )
 
     @current_user
