@@ -12,3 +12,8 @@ es:
   messages:
     confirmations:
       are_you_sure: '¿Estas seguro?'
+
+  dashboard:
+    articles:
+      index:
+        info: 'Esta es la lista de los articulos del sitio.'

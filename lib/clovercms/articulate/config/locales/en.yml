@@ -6,3 +6,8 @@ en:
   messages:
     confirmations:
       are_you_sure: Are you sure?
+
+  dashboard:
+    articles:
+      index:
+        info: 'This is your site article list.'
