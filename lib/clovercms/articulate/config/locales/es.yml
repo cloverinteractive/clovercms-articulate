@@ -3,10 +3,11 @@ es:
     models:
       article:  'Articulo'
     attributes:
-      title:        'Titulo'
-      body:         'Cuerpo'
-      publish_date: 'Fecha de publicación'
-      publish:      'Publicar'
+      article:
+        title:        'Titulo'
+        body:         'Cuerpo'
+        publish_date: 'Fecha de publicación'
+        publish:      'Publicar'
 
   messages:
     confirmations:
