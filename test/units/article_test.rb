@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class ArticuleTest < ActiveSupport::TestCase
+class ArticleTest < ActiveSupport::TestCase
   test "must have title" do
     assert article = Factory.build( :article, :title => nil )
     assert article.invalid?

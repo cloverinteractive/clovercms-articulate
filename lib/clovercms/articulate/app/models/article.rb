@@ -3,8 +3,7 @@ class Article < ActiveRecord::Base
 
   validates_presence_of :title, :body, :publish_date
   validates_length_of :body, :minimum => 50
-  validates :publish_date, :date => { :after_or_equal_to => lambda { Date.today } }
-
+  validates :publish_date, :date => { :after_or_equal_to => lambda { | date | Date.today } }
   scope :published, where([ 'published = ?', true ])
 
   def to_param
