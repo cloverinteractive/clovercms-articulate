@@ -56,4 +56,9 @@ class ArticuleTest < ActiveSupport::TestCase
       article.delete
     end
   end
+
+  test "article can't be published in the past" do
+    assert article = Factory.build( :article, :publish_date => 5.days.ago.to_date )
+    assert article.invalid?
+  end
 end

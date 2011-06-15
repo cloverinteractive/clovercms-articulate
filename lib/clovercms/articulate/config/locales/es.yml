@@ -7,7 +7,7 @@ es:
         title:        'Titulo'
         body:         'Cuerpo'
         publish_date: 'Fecha de publicación'
-        publish:      'Publicar'
+        published:    'Publicar'
 
   messages:
     confirmations:

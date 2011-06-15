@@ -7,9 +7,9 @@
     = f.text_area :body, :class => 'wymeditor'
 
     = f.label :publish_date
-    = f.date_select :publish_date
+    .grouped_selector= f.date_select :publish_date, :start_year => Time.now.year
 
-    = f.label     :published
-    = f.check_box :published,   :class => :published
+    = f.label :published
+    .publish_article= f.check_box :published,   :class => :published
 
     = f.submit :class => 'wymupdate'
