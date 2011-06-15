@@ -4,6 +4,7 @@ gem 'acl9'
 gem 'kaminari'
 gem 'haml-rails'
 gem 'jquery-rails'
+gem 'tabs_on_rails'
 
 group :test do
   gem 'factory_girl_rails'

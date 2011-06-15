@@ -2,6 +2,9 @@ class Dashboard::ArticlesController < ApplicationController
   before_filter :authenticate_user!
   before_filter :set_article, :only => [ :edit, :update, :destroy ]
 
+  set_tab :list_articles,  :only => :index
+  set_tab :new_article,   :only => :new
+
   access_control do
     allow :admin
     allow :editor,  :to => [ :new, :create, :index ]
