@@ -1,5 +1,7 @@
 %fieldset
   = form_for [ :dashboard, article ], :validate => true do |f|
+    = render "shared/error_messages", :target => @article
+
     = f.label :title
     = f.text_field :title
 
