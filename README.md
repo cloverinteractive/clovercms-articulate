@@ -1,4 +1,5 @@
-__Articulate is just simple article support for clovercms__
+# Articulate [![Build Status](http://travis-ci.org/cloverinteractive/clovercms-articulate.png)](http://travis-ci.org/cloverinteractive/clovercms-articulate)
+## just simple article support for clovercms
 
 ## Requirements
 
