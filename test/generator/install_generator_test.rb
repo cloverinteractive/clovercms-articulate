@@ -9,8 +9,20 @@ class InstallGeneratorTest < Rails::Generators::TestCase
   # Disbale timestamped migrations to predict the migration number
   ActiveRecord::Base.timestamped_migrations = false
 
-  test "all files are properly created" do
+  test "migration gets properly created" do
     run_generator
-    assert_file "db/migrate/001_create_articles.rb"
+    assert_file "db/migrate/001_create_articles.rb", /create_table/
+  end
+
+  test "model gets copied" do
+    run_generator
+    assert_file "app/models/article.rb", /Article/
+  end
+
+  test "locales get copied" do
+    run_generator
+    %w/es en/.each do |locale|
+      assert_file "config/locales/articulate.#{ locale }.yml", /#{ locale }:/
+    end
   end
 end

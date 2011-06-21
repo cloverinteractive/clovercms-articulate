@@ -4,6 +4,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
 
+  before_filter :set_locale
   rescue_from Acl9::AccessDenied, :with => :roles_notice
 
   def current_user
@@ -26,5 +27,10 @@ class ApplicationController < ActionController::Base
     END_NOTICE
 
     render :text =>  notice, :status => 403
+  end
+
+  private
+  def set_locale
+    I18n.locale = params[:locale] || 'en'
   end
 end

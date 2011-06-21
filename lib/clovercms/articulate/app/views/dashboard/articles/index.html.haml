@@ -6,13 +6,13 @@
   %thead
     %tr
       %th= t 'activerecord.attributes.article.title'
-      %th= t 'activerecord.attributes.article.published_at'
+      %th= t 'activerecord.attributes.article.publish_date'
       %th= t 'messages.labels.operations'
   %tbody
     - @articles.each do |article|
       %tr{ :class => cycle(:odd, :even) }
         %td= link_to article.title, edit_dashboard_article_path(article)
-        %td= l article.publish_date, :format => :short
+        %td= article.publish_date
         %td
           = link_to t('links.edit'), edit_dashboard_article_path(article)
           |

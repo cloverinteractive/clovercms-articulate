@@ -7,4 +7,6 @@ test/dummy/db/*.sqlite3
 test/dummy/db/schema.rb
 test/dummy/db/migrate/*create_articles.rb
 test/dummy/tmp
+test/dummy/app/models/article.rb
+test/dummy/config/locales/*.yml
 tmp/*
