@@ -15,6 +15,14 @@ To install simply open up `Gemfile` in your favorite editor and add `gem
 2. `rake db:migrate`
 3. Enjoy
 
+### Wait, wha'?
+
+`rails g clover_cms:articulate:install` copies an articles model and generates an articles migration. Why do we do this? the model is perhaps the piece that is most likely to change so we give you this out of the box to let you set your own validations, custom relationships, etc.
+
+### But I want my views too :(
+
+Simply run `rails g clover_cms:articulate:views` that will copy all the views into your app/views directory.
+
 ## Running the tests
 
 You first need to download articulate from git and do as follows:

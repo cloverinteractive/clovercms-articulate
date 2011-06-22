@@ -9,7 +9,7 @@ module CloverCms
 
         desc "Generate clovercms-articulate migrations"
 
-        source_root File.expand_path('../../templates', __FILE__)
+        source_root File.expand_path( '../templates/migrations', __FILE__ )
 
         def self.next_migration_number(path)
           if ActiveRecord::Base.timestamped_migrations
@@ -24,13 +24,13 @@ module CloverCms
         end
 
         def copy_model
-          copy_file File.join( LIB_ROOT_APP_PATH, 'app/models/article.rb' ), 'app/models/article.rb'
+          copy_file File.expand_path( File.join( LIB_ROOT_APP_PATH, 'app/models/article.rb' ), __FILE__ ), 'app/models/article.rb'
         end
 
         def copy_locales
           %w/es en/.each do |locale|
             locale_file = "articulate.#{ locale }.yml"
-            copy_file File.join( LIB_ROOT_APP_PATH, "config/locales/#{ locale_file }" ), "config/locales/#{ locale_file }"
+            copy_file File.expand_path( File.join( LIB_ROOT_APP_PATH, "config/locales/#{ locale_file }" ), __FILE__ ), "config/locales/#{ locale_file }"
           end
         end
 

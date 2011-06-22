@@ -1,5 +1,5 @@
 require 'test_helper'
-require File.expand_path( "../../lib/generators/clover_cms/articulate/install/install_generator.rb", File.dirname( __FILE__ ) )
+require File.expand_path( "../../lib/generators/clover_cms/articulate/install_generator.rb", File.dirname( __FILE__ ) )
 
 class InstallGeneratorTest < Rails::Generators::TestCase
   tests CloverCms::Articulate::Generators::InstallGenerator

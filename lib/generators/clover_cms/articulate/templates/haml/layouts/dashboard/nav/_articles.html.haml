@@ -1,0 +1,3 @@
+= tabs_tag :open_tabs => { :id => "sub_menu", :class => "sub_nav" } do |tab|
+  = tab.list_articles  t('links.list'), dashboard_articles_path
+  = tab.new_article    t('links.new'), new_dashboard_article_path
