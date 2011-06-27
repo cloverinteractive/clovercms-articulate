@@ -1,0 +1,30 @@
+<p class="info">
+  <span class="bold"><%= t 'messages.labels.information' %></span>
+  <%= t '.info' %>
+</p>
+
+<table class="tabular" cellpadding="0" cellspacing="0">
+  <thead>
+    <tr>
+      <th><%= t 'activerecord.attributes.article.title' %></th>
+      <th><%= t 'activerecord.attributes.article.publish_date' %></th>
+      <th><%= t 'messages.labels.operations' %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @articles.each do |article| %>
+      <tr class="<%= cycle(:odd, :even) %>">
+        <td><%= link_to article.title, edit_dashboard_article_path(article) %></td>
+        <td><%= article.publish_date %></td>
+        <td>
+          <%= link_to t('links.edit'), edit_dashboard_article_path(article) %>
+          |
+          <%= link_to t('links.destroy'), dashboard_article_path(article), :method => :delete, :confirm => t('messages.confirmations.are_you_sure') %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= link_to t('links.new'), new_dashboard_article_path %>
+|
+<%= paginate @articles %>

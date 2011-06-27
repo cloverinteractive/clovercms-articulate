@@ -1,0 +1,19 @@
+<fieldset>
+  <%= form_for [ :dashboard, article ], :validate => true do |f| %>
+    <%= render "shared/error_messages", :target => @article %>
+
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+
+    <%= f.label :body %>
+    <%= f.text_area :body, :class => 'wymeditor' %>
+
+    <%= f.label :publish_date %>
+    <div class="grouped_selector"><%= f.date_select :publish_date, :start_year => Time.now.year %></div>
+
+    <%= f.label :published %>
+    <div class="publish_article"><%= f.check_box :published,   :class => :published %>
+
+    <%= f.submit :class => 'wymupdate' %>
+  <% end %>
+</fieldset>

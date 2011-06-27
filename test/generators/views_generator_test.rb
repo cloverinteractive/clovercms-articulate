@@ -14,7 +14,7 @@ class ViewsGeneratorTest < Rails::Generators::TestCase
   end
 
   test 'haml views get copied' do
-    run_generator '--haml'
+    run_generator %w(--haml)
     assert_directory 'app/views/dashboard'
     assert_directory 'app/views/dashboard/articles'
     assert_file 'app/views/dashboard/articles/index.html.haml'
